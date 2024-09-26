@@ -22,7 +22,7 @@ const Experience = () => {
     },
     "6D Technologies": {
       role: "Full Stack Developer",
-      duration: "Aug 2023 - May 2025",
+      duration: "Dec 2021 - Aug 2023",
       projects: [
         {
           client: "VI (Vodafone Idea)",
@@ -65,7 +65,7 @@ const Experience = () => {
     },
     "Cognizant Technology Solutions India Ltd": {
       role: "Programmer Analyst",
-      duration: "Nov 2020 - Jan 2022",
+      duration: "Nov 2020 - Dec 2021",
       projects: [
         {
           client: "Voya Financial",

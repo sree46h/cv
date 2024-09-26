@@ -38,6 +38,20 @@ function App() {
 
 
   },[])
+  const menuHandler=(data)=>{
+    if(data=="about"){
+      handleScrollToSection(section1Ref)
+      setMenuVisible(!menuVisible)
+    }
+    else if(data=="projects"){
+      handleScrollToSection(section2Ref)
+      setMenuVisible(!menuVisible)
+    }
+    else if(data=="contact"){
+      handleScrollToSection(section3Ref)
+      setMenuVisible(!menuVisible)
+    }
+  }
   return (
     <div className="App">
       <div className='main-page'>
@@ -50,7 +64,7 @@ function App() {
               </div>
             </Menu.Item>
             <Menu.Item className='mob-menu-list'>
-            <a href="/sreehari_resume.pdf" download="Sreehari_Resume.pdf">
+            <a href="/Sreeharinaidu_Resume.pdf" download="Sreehari_Resume.pdf">
             <p style={{ aliginSelf: 'center' }} className='nav-list-items'>Download Resume</p>
       </a>
       </Menu.Item>
@@ -77,13 +91,13 @@ function App() {
             </Menu.Item>
             {menuVisible && <>
               <Menu.Item className='mob-menu-list'>
-              <p style={{ aliginSelf: 'center' }} className='nav-list-items'>About</p>
+              <p style={{ aliginSelf: 'center' }} className='nav-list-items' onClick={()=>menuHandler("about")}>About</p>
             </Menu.Item>
             <Menu.Item className='mob-menu-list'>
-              <p style={{ aliginSelf: 'center' }} className='nav-list-items'>Projects</p>
+              <p style={{ aliginSelf: 'center' }} className='nav-list-items' onClick={()=>menuHandler("projects")}>Projects</p>
             </Menu.Item>
             <Menu.Item className='mob-menu-list'>
-              <p style={{ aliginSelf: 'center' }} className='nav-list-items'>Contact</p>
+              <p style={{ aliginSelf: 'center' }} className='nav-list-items' onClick={()=>menuHandler("contact")}>Contact</p>
             </Menu.Item>
             <Menu.Item className='mob-menu-list'>
             <a href="/sreehari_resume.pdf" download="Sreehari_Resume.pdf">
@@ -117,15 +131,7 @@ function App() {
 
         <span ref={section2Ref}></span>
       <Experience/>
-
-      <h1 className="form-title" style={{ textAlign: 'center' }}>Contact</h1>
-        <div className="contact-container" ref={section3Ref} style={{display:'flex',flexDirection:'column'}}>
-        <p>if you want to contact me directly, please {<a href="mailto:sreeharinaidu46@gmail.com?subject=Hello&body=This is the body text" style={{}}>Mail me directly</a>}</p>
-
-        <ContactForm/>
-        </div>
-   
-        <h1 style={{padding:'20px',display:'flex',justifyContent:'center'}}>Education</h1>
+      <h1 style={{padding:'20px',display:'flex',justifyContent:'center'}}>Education</h1>
         <div>
         {Object.entries(degree).map(([company, { university, duration, about }]) => (
           <div key={company} style={{paddingBottom:'20px'}}>
@@ -138,6 +144,14 @@ function App() {
           </div>
         ))}
         </div>
+      <h1 className="form-title" style={{ textAlign: 'center' }}>Contact</h1>
+        <div className="contact-container" ref={section3Ref} style={{display:'flex',flexDirection:'column'}}>
+        <p>if you want to contact me directly, please {<a href="mailto:sreeharinaidu46@gmail.com?subject=Hello&body=This is the body text" style={{}}>Mail me directly</a>}</p>
+
+        <ContactForm/>
+        </div>
+   
+       
 
      
 

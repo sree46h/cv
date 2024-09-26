@@ -347,6 +347,7 @@ flex-direction: column;
 }
 .contact-form-container{
   width:100%;
+  margin-bottom: 50px;
 }
  @media only screen and (max-width: 768px) {
   .desk-menu{
@@ -380,10 +381,12 @@ flex-direction: column;
   }
   .contact-form-container{
     width:100%;
+    margin-bottom: 100px;
   }
   #main-container{
     padding:130px 50px 50px;
   }
+  
 }
 @media only screen and (min-width: 768px) {
   .mob-menu{
