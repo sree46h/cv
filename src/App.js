@@ -25,19 +25,6 @@ function App() {
   const handleScrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
   };
-  useEffect(()=>{
-    toast.info("Iam Still Developing site, sorry for terrible web design!", {
-      autoClose: 30000, // Delay before auto-close (in milliseconds)
-      delay: 1000, // Delay before the toast shows (in milliseconds)
-    });
-    toast.info("Also developing Codegram Workspace, i will release soon", {
-      autoClose: 30000, // Delay before auto-close (in milliseconds)
-      delay: 1000, // Delay before the toast shows (in milliseconds)
-    });
-  
-
-
-  },[])
   const menuHandler=(data)=>{
     if(data=="about"){
       handleScrollToSection(section1Ref)
@@ -64,7 +51,7 @@ function App() {
               </div>
             </Menu.Item>
             <Menu.Item className='mob-menu-list'>
-            <a href="/Sreeharinaidu_Resume.pdf" download="Sreehari_Resume.pdf">
+            <a href="/Sreeharinaidu_Rangani_Resume.pdf" download="Sreeharinaidu_Rangani_Resume.pdf">
             <p style={{ aliginSelf: 'center' }} className='nav-list-items'>Download Resume</p>
       </a>
       </Menu.Item>
@@ -100,7 +87,7 @@ function App() {
               <p style={{ aliginSelf: 'center' }} className='nav-list-items' onClick={()=>menuHandler("contact")}>Contact</p>
             </Menu.Item>
             <Menu.Item className='mob-menu-list'>
-            <a href="/sreehari_resume.pdf" download="Sreehari_Resume.pdf">
+            <a href="/Sreeharinaidu_Rangani_Resume.pdf" download="Sreeharinaidu_Rangani_Resume.pdf">
             <p style={{ aliginSelf: 'center' }} className='nav-list-items'>Download Resume</p>
       </a>
       </Menu.Item>
